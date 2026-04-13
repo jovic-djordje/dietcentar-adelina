@@ -2,6 +2,7 @@ import AboutSection from "./AboutSection";
 import BannerSection from "./BannerSection";
 import HeroSection from "./HeroSection";
 import OfferSection from "./OfferSection";
+import TestimonialSection from "./TestimonialSection";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <BannerSection />
       <OfferSection />
       <AboutSection />
+      <TestimonialSection />
     </>
   );
 };

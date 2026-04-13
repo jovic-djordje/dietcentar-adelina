@@ -2,6 +2,12 @@ import logo from "./logo.webp";
 import heroImage from "./hero-img.png";
 import heroMobileImage from "./mobile-hero.png";
 import aboutSectionImage from "./about-sec-img.jpeg";
+import testimonialImgOne from "./testimonial-img.png";
+import testimonialImgTwo from "./testimonial-img-two.png";
+import testimonialImgThree from "./testimonial-img-three.png";
+import testimonialImgFour from "./testimonial-img-four.png";
+import testimonialImgFive from "./testimonial-img-five.png";
+import testimonialImgSix from "./testimonial-img-six.png";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -23,4 +29,71 @@ const AboutSectionImage = ({ className }) => {
   );
 };
 
-export { Logo, HeroImage, HeroMobileImage, AboutSectionImage };
+const TestimonialImgOne = ({ className }) => {
+  return (
+    <img
+      src={testimonialImgOne}
+      alt="testimonial image"
+      className={className}
+    />
+  );
+};
+
+const TestimonialImgTwo = ({ className }) => {
+  return (
+    <img
+      src={testimonialImgTwo}
+      alt="testimonial image"
+      className={className}
+    />
+  );
+};
+const TestimonialImgThree = ({ className }) => {
+  return (
+    <img
+      src={testimonialImgThree}
+      alt="testimonial image"
+      className={className}
+    />
+  );
+};
+const TestimonialImgFour = ({ className }) => {
+  return (
+    <img
+      src={testimonialImgFour}
+      alt="testimonial image"
+      className={className}
+    />
+  );
+};
+const TestimonialImgFive = ({ className }) => {
+  return (
+    <img
+      src={testimonialImgFive}
+      alt="testimonial image"
+      className={className}
+    />
+  );
+};
+const TestimonialImgSix = ({ className }) => {
+  return (
+    <img
+      src={testimonialImgSix}
+      alt="testimonial image"
+      className={className}
+    />
+  );
+};
+
+export {
+  Logo,
+  HeroImage,
+  HeroMobileImage,
+  AboutSectionImage,
+  TestimonialImgOne,
+  TestimonialImgTwo,
+  TestimonialImgThree,
+  TestimonialImgFour,
+  TestimonialImgFive,
+  TestimonialImgSix,
+};
