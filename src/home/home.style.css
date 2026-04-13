@@ -38,17 +38,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
+  gap: 28px;
 }
 
 .hero-section-title {
   font-family: "Teachers";
-  font-weight: 600;
+  font-weight: 500;
   font-size: 60px;
 }
 
 .hero-section-text {
   line-height: 1.7;
+  font-size: 17px;
 }
 
 .hero-section-btn {
@@ -141,9 +142,97 @@
   } /* -50% jer je sadržaj duppliciran */
 }
 
+/* OFFER SECTION */
+.offer-section {
+  padding: 90px 0px;
+}
+
+.offer-section-holder {
+  max-width: 1285px;
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.offer-section-text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.offer-section-title {
+  font-size: 45px;
+  font-weight: 500;
+  font-family: "Teachers";
+}
+
+.offer-section-text {
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.offer-carts-holder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.offer-cart {
+  background-color: hsl(78, 58%, 77%);
+  border: none;
+  border-radius: 20px;
+  padding: 24px 0px;
+  color: hsl(162, 39%, 22%);
+}
+
+.offer-cart-width {
+  width: 85%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.offer-cart-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.offer-cart-text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.offer-cart-title {
+  font-family: "Teachers";
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.offer-cart-text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
-  .hero-inner {
+  .hero-inner,
+  .offer-carts-holder,
+  .offer-section-text-holder {
     width: 95%;
   }
 }
@@ -164,6 +253,18 @@
   .hero-section-btn {
     font-size: 13px;
     max-width: 280px;
+  }
+
+  .offer-section-title {
+    font-size: 40px;
+  }
+
+  .offer-section-text {
+    font-size: 15px;
+  }
+
+  .offer-carts-holder {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -206,10 +307,22 @@
     margin: 0px auto;
     padding-bottom: 40px;
   }
+
+  .offer-section {
+    padding: 40px 0px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .hero-section-title {
     font-size: 40px;
+  }
+
+  .offer-section-title {
+    font-size: 35px;
+  }
+
+  .offer-carts-holder {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
