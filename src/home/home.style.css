@@ -94,6 +94,53 @@
   display: none;
 }
 
+/* BANNER SECTION */
+.banner {
+  background-color: hsl(78, 58%, 77%);
+  padding: 20px 0px;
+  overflow: hidden;
+}
+
+.banner-holder {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scroll-banner 25s linear infinite;
+}
+
+.banner-strip {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.banner-text-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: hsl(162, 39%, 22%);
+  white-space: nowrap;
+  padding: 0 20px;
+  font-family: "Teachers";
+  font-weight: 500;
+}
+
+.banner-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes scroll-banner {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  } /* -50% jer je sadržaj duppliciran */
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .hero-inner {
@@ -157,6 +204,7 @@
     text-align: center;
     width: 95%;
     margin: 0px auto;
+    padding-bottom: 40px;
   }
 }
 
