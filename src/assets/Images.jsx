@@ -1,6 +1,7 @@
 import logo from "./logo.webp";
 import heroImage from "./hero-img.png";
 import heroMobileImage from "./mobile-hero.png";
+import aboutSectionImage from "./about-sec-img.jpeg";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -16,4 +17,10 @@ const HeroMobileImage = ({ className }) => {
   );
 };
 
-export { Logo, HeroImage, HeroMobileImage };
+const AboutSectionImage = ({ className }) => {
+  return (
+    <img src={aboutSectionImage} alt="image of Adelina" className={className} />
+  );
+};
+
+export { Logo, HeroImage, HeroMobileImage, AboutSectionImage };
