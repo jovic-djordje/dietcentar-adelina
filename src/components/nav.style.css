@@ -1,5 +1,10 @@
 header {
   padding-top: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .header-holder {
@@ -7,12 +12,13 @@ header {
   width: 100%;
   margin: 0px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 50px;
 }
 
 .logo {
-  width: 55px;
+  width: 60px;
   height: 50px;
 }
 
@@ -39,8 +45,29 @@ header {
   color: hsl(0, 0%, 100%);
   font-size: 15px;
   cursor: pointer;
+  border: 1px solid hsl(162, 39%, 22%);
 }
 
 .nav-btn:hover {
   background-color: hsl(78, 58%, 77%);
+  color: hsl(162, 39%, 22%);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .header-holder {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-holder {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-holder {
+    display: none;
+  }
 }
