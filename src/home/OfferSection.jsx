@@ -43,7 +43,7 @@ const OfferSection = () => {
         </div>
         <div className="offer-carts-holder">
           {carts.map((cart) => (
-            <div className="offer-cart">
+            <div className="offer-cart" key={cart.id}>
               <div className="offer-cart-width">
                 {cart.icon}
                 <div className="offer-cart-text-holder">
