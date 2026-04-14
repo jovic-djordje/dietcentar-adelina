@@ -301,7 +301,7 @@
   align-items: center;
   flex-direction: column;
   gap: 12px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(94, 54%, 95%);
   text-align: center;
 }
 
@@ -367,7 +367,7 @@
 
 .testimonial-cart {
   max-width: 310px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(94, 54%, 95%);
   border-radius: 20px;
   padding: 24px 0px;
   display: flex;
@@ -410,13 +410,97 @@
   color: hsl(162, 39%, 22%);
 }
 
+/* LOCATION SECTION */
+.location {
+  padding: 90px 0px;
+}
+
+.location-section-holder {
+  max-width: 1285px;
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.location-text-holder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.location-title {
+  font-family: "Teachers";
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.location-text {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.location-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location-info-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.location-icon-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(78, 58%, 77%);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
+.location-section-icon {
+  font-size: 24px;
+  color: hsl(162, 39%, 22%);
+}
+
+.address-info-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  font-family: "Teachers";
+  font-weight: 500;
+}
+
+.location-section-btn {
+  max-width: 185px !important;
+}
+
+.map {
+  width: 100%;
+  border-radius: 20px;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .hero-inner,
   .offer-carts-holder,
   .offer-section-text-holder,
   .about-section-holder,
-  .test-section-holder {
+  .test-section-holder,
+  .location-section-holder {
     width: 95%;
   }
 }
@@ -478,6 +562,18 @@
   .test-marquee-wrapper::after {
     width: 30px;
   }
+
+  .location-title {
+    font-size: 40px;
+  }
+
+  .location-text {
+    font-size: 15px;
+  }
+
+  .address-info-holder {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 820px) {
@@ -522,12 +618,19 @@
 
   .offer-section,
   .about-section,
-  .test-section {
+  .test-section,
+  .location {
     padding: 40px 0px;
   }
 
   .about-section-holder {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .location-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
   }
 }
 
@@ -550,5 +653,14 @@
 
   .offer-carts-holder {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .location-icon-holder {
+    width: 45px;
+    height: 45px;
+  }
+
+  .address-info-holder {
+    font-size: 14px;
   }
 }
