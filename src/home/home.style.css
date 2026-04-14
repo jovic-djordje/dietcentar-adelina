@@ -100,6 +100,7 @@
   background-color: hsl(78, 58%, 77%);
   padding: 20px 0px;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .banner-holder {
@@ -493,6 +494,70 @@
   border-radius: 20px;
 }
 
+/* CTA SECTION */
+.cta-section {
+  padding: 90px 0px;
+}
+
+.cta-section-holder {
+  max-width: 1285px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(78, 58%, 77%);
+  border-radius: 20px;
+  position: relative;
+  overflow: visible;
+  background-image: url(/src/assets/logo.webp);
+  background-repeat: no-repeat;
+  background-position: right -72px top;
+  background-size: 800px 640px;
+  height: 450px;
+  padding-left: 40px;
+}
+
+.cta-section-text-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.cta-section-title {
+  font-size: 45px;
+  font-weight: 500;
+  font-family: "Teachers";
+}
+
+.cta-section-text {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.cta-section-btn {
+  max-width: 180px !important;
+  margin-top: 20px;
+}
+
+.cta-img-wrapper {
+  flex-shrink: 0;
+  z-index: 2;
+  align-self: flex-end; /* ← slika poravnata prema dnu */
+}
+
+.cta-section-img {
+  width: 500px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: -4px;
+  margin-right: 40px;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .hero-inner,
@@ -500,7 +565,8 @@
   .offer-section-text-holder,
   .about-section-holder,
   .test-section-holder,
-  .location-section-holder {
+  .location-section-holder,
+  .cta-section-holder {
     width: 95%;
   }
 }
@@ -574,6 +640,25 @@
   .address-info-holder {
     font-size: 15px;
   }
+
+  .cta-section-holder {
+    height: 360px;
+    padding-left: 30px;
+    background-size: 650px 550px;
+  }
+
+  .cta-section-title {
+    font-size: 40px;
+  }
+
+  .cta-section-text {
+    font-size: 15px;
+  }
+
+  .cta-section-img {
+    width: 400px;
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 820px) {
@@ -596,7 +681,7 @@
     display: block;
     width: 100%;
     height: auto;
-    margin-bottom: -80%; /* Uvlači bijeli prostor ispod */
+    margin-bottom: -80%;
     margin-top: -20%;
   }
 
@@ -616,10 +701,15 @@
     padding-bottom: 40px;
   }
 
+  .banner {
+    margin-bottom: 20px;
+  }
+
   .offer-section,
   .about-section,
   .test-section,
-  .location {
+  .location,
+  .cta-section {
     padding: 40px 0px;
   }
 
@@ -631,6 +721,40 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 28px;
+  }
+
+  .cta-section-holder {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    padding: 30px 30px 0px 30px;
+    background-position: center bottom -320px;
+    background-size: 800px;
+    overflow: hidden;
+    gap: 36px;
+  }
+
+  .cta-section-text-holder {
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .cta-section-btn {
+    margin-top: 0;
+  }
+
+  .cta-img-wrapper {
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  .cta-section-img {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: -4px;
+    margin-right: 0;
   }
 }
 
@@ -662,5 +786,9 @@
 
   .address-info-holder {
     font-size: 14px;
+  }
+
+  .cta-section-title {
+    font-size: 35px;
   }
 }
