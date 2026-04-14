@@ -8,6 +8,7 @@ import testimonialImgThree from "./testimonial-img-three.png";
 import testimonialImgFour from "./testimonial-img-four.png";
 import testimonialImgFive from "./testimonial-img-five.png";
 import testimonialImgSix from "./testimonial-img-six.png";
+import ctaImg from "./cta-img.png";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -48,6 +49,7 @@ const TestimonialImgTwo = ({ className }) => {
     />
   );
 };
+
 const TestimonialImgThree = ({ className }) => {
   return (
     <img
@@ -57,6 +59,7 @@ const TestimonialImgThree = ({ className }) => {
     />
   );
 };
+
 const TestimonialImgFour = ({ className }) => {
   return (
     <img
@@ -66,6 +69,7 @@ const TestimonialImgFour = ({ className }) => {
     />
   );
 };
+
 const TestimonialImgFive = ({ className }) => {
   return (
     <img
@@ -75,11 +79,22 @@ const TestimonialImgFive = ({ className }) => {
     />
   );
 };
+
 const TestimonialImgSix = ({ className }) => {
   return (
     <img
       src={testimonialImgSix}
       alt="testimonial image"
+      className={className}
+    />
+  );
+};
+
+const CtaImg = ({ className }) => {
+  return (
+    <img
+      src={ctaImg}
+      alt="slika Adeline i  drzi ciniju sa vocem"
       className={className}
     />
   );
@@ -96,4 +111,5 @@ export {
   TestimonialImgFour,
   TestimonialImgFive,
   TestimonialImgSix,
+  CtaImg,
 };
