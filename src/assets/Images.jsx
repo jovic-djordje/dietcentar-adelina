@@ -12,6 +12,7 @@ import testimonialImgFive from "./testimonial-img-five.png";
 import testimonialImgSix from "./testimonial-img-six.png";
 import ctaImg from "./cta-img.png";
 import missionImg from "./mission-img.jpeg";
+import featuresImg from "./features-img.jpg";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -121,6 +122,16 @@ const MissionImg = ({ className }) => {
   );
 };
 
+const FeaturesImg = ({ className }) => {
+  return (
+    <img
+      src={featuresImg}
+      alt="photo of adelina while doing testing on patience"
+      className={className}
+    />
+  );
+};
+
 export {
   Logo,
   LogoLight,
@@ -136,4 +147,5 @@ export {
   TestimonialImgSix,
   CtaImg,
   MissionImg,
+  FeaturesImg,
 };
