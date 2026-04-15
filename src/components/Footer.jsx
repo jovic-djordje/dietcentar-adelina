@@ -1,4 +1,6 @@
-import { LogoLight } from "../assets/Images";
+import { FooterLogo, LogoLight } from "../assets/Images";
+import { FaInstagram } from "react-icons/fa6";
+import { BiLogoGmail } from "react-icons/bi";
 import "./nav.style.css";
 
 const Footer = () => {
@@ -6,7 +8,7 @@ const Footer = () => {
     <footer>
       <div className="footer-holder">
         <div className="footer-nav-holder">
-          <LogoLight className="footer-logo" />
+          <FooterLogo className="footer-logo" />
           <nav className="footer-nav">
             <ul className="footer-nav-item-holder">
               <li className="footer-nav-item">O centru</li>
@@ -15,6 +17,10 @@ const Footer = () => {
               <li className="footer-nav-item">Kontakt</li>
             </ul>
           </nav>
+          <div className="footer-socials-holder">
+            <FaInstagram className="footer-social-icon" />
+            <BiLogoGmail className="footer-social-icon" />
+          </div>
         </div>
         <div className="footer-attribute">
           <p className="footer-rights">

@@ -1,5 +1,6 @@
 import logo from "./logo.webp";
 import logoLight from "./logo2.png";
+import footerLogo from "./logo2.webp";
 import heroImage from "./hero-img.png";
 import heroMobileImage from "./mobile-hero.png";
 import aboutSectionImage from "./about-sec-img.jpeg";
@@ -17,6 +18,10 @@ const Logo = ({ className }) => {
 
 const LogoLight = ({ className }) => {
   return <img src={logoLight} alt="diet centar logo" className={className} />;
+};
+
+const FooterLogo = ({ className }) => {
+  return <img src={footerLogo} alt="diet centar logo" className={className} />;
 };
 
 const HeroImage = ({ className }) => {
@@ -108,6 +113,7 @@ const CtaImg = ({ className }) => {
 export {
   Logo,
   LogoLight,
+  FooterLogo,
   HeroImage,
   HeroMobileImage,
   AboutSectionImage,

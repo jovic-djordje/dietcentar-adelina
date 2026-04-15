@@ -19,6 +19,8 @@ header {
 
 .header-ham-btn {
   font-size: 36px;
+  color: hsl(162, 39%, 22%);
+  cursor: pointer;
 }
 
 .logo {
@@ -71,8 +73,7 @@ footer {
 
 .footer-nav-holder {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 24px;
 }
@@ -86,9 +87,27 @@ footer {
   color: hsl(94, 54%, 95%);
 }
 
+.footer-nav-item {
+  cursor: pointer;
+}
+
 .footer-logo {
-  width: 60px;
+  width: 65px;
   height: 50px;
+  color: hsl(94, 54%, 95%);
+}
+
+.footer-socials-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-icon {
+  font-size: 22px;
+  color: hsl(94, 54%, 95%);
+  cursor: pointer;
 }
 
 .footer-attribute {
@@ -130,6 +149,10 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+  .footer-nav-holder {
+    flex-direction: column;
+  }
+
   .footer-nav-item-holder {
     flex-direction: column;
   }
