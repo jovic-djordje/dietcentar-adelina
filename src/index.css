@@ -7,4 +7,5 @@
 body {
   font-family: "Inter";
   background-color: hsl(94, 54%, 95%);
+  font-weight: 300;
 }
