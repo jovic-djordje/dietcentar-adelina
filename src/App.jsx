@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation";
 import Home from "./home/Home";
 import Footer from "./components/Footer";
 import CenterHome from "./center/CenterHome";
+import Contact from "./contact/Contact";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ocentru" element={<CenterHome />} />
+        <Route path="/kontakt" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

@@ -14,6 +14,7 @@ import ctaImg from "./cta-img.png";
 import missionImg from "./mission-img.jpeg";
 import featuresImg from "./features-img.jpg";
 import wave from "./wave-haikei.svg";
+import waveLight from "./wave-light.svg";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -139,6 +140,16 @@ const Wave = ({ className }) => {
   );
 };
 
+const WaveLight = ({ className }) => {
+  return (
+    <img
+      src={waveLight}
+      alt="contact hero section image"
+      className={className}
+    />
+  );
+};
+
 export {
   Logo,
   LogoLight,
@@ -156,4 +167,5 @@ export {
   MissionImg,
   FeaturesImg,
   Wave,
+  WaveLight,
 };
