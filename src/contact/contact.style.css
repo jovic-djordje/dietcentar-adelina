@@ -1,0 +1,118 @@
+.contact-section {
+  padding: 90px 0;
+  background-color: hsl(78, 58%, 77%);
+}
+
+.contact-section-holder {
+  max-width: 1285px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.contact-form-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: hsl(162, 39%, 22%);
+  border: 1px solid hsl(0, 0%, 92%);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form-group label {
+  font-size: 14px;
+  color: hsl(78, 58%, 77%);
+  font-weight: 500;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  padding: 10px 14px;
+  border: 1px solid hsl(94, 54%, 95%);
+  border-radius: 8px;
+  font-size: 14px;
+  color: hsl(0, 0%, 20%);
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  background-color: hsl(94, 54%, 95%);
+  resize: none;
+}
+
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+  color: hsl(0, 0%, 52%);
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  border-color: hsl(162, 39%, 22%);
+}
+
+.contact-form-btn-holder {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-form-btn {
+  font-family: "Teachers", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  max-width: 150px;
+  width: 100%;
+  background-color: hsl(78, 58%, 77%);
+  color: hsl(162, 39%, 22%);
+  font-weight: 500;
+}
+
+.contact-form-btn:hover {
+  background-color: hsl(162, 39%, 22%);
+  color: hsl(78, 58%, 77%);
+  border: 1px solid hsl(78, 58%, 77%);
+}
+
+.contact-btn-icon-holder {
+  background-color: hsl(162, 39%, 22%);
+}
+
+.contact-form-btn-icon {
+  color: hsl(78, 58%, 77%);
+}
+
+@media screen and (max-width: 820px) {
+  .contact-form-wrapper {
+    padding: 25px;
+  }
+
+  .contact-section {
+    padding: 40px 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-btn {
+    max-width: 500px;
+    width: 100%;
+  }
+}
