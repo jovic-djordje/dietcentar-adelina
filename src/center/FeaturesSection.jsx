@@ -37,6 +37,7 @@ const FeaturesSection = () => {
     <section className="features-section">
       <div className="features-section-holder">
         <div className="features-section-text-holder">
+          <h4>Specijalizacije</h4>
           <h2 className="features-section-title">
             Individualni pristup vašem zdravlju
           </h2>
