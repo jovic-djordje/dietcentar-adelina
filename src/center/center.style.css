@@ -7,10 +7,15 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-image: url(../assets/wave-haikei\ \(1\).png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+}
+
+.hero-bg-shape {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 0;
 }
 
 .center-hero-section-holder {
@@ -31,6 +36,7 @@
   max-width: 600px;
   width: 100%;
   text-align: center;
+  z-index: 1;
 }
 
 /* ABOUT CENTER - MISSION SECTION */
@@ -228,6 +234,69 @@
   line-height: 1.7;
 }
 
+/* ABOUT CENTER - EXPERTISE SECTION */
+.expertise-section {
+  padding: 90px 0px;
+}
+
+.expertise-section-carts-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Prva dva elementa — veće kartice, svaka zauzima 1.5 kolone */
+.expertise-cart:nth-child(1) {
+  grid-column: 1 / 2; /* Zauzima kolone 1 i 2 */
+}
+
+.expertise-cart:nth-child(2) {
+  grid-column: 2 / 3; /* Zauzima kolone 3 i 4 */
+}
+
+.expertise-cart {
+  padding: 24px 0px;
+  border-radius: 20px;
+  background-color: hsl(162, 39%, 22%);
+}
+
+.expertise-cart-width {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 85%;
+  margin: 0px auto;
+  gap: 36px;
+  color: hsl(94, 54%, 95%);
+}
+
+.expertise-cart-width span {
+  font-weight: 700;
+  font-size: 20px;
+  color: hsl(78, 58%, 77%);
+}
+
+.exeprtise-cart-text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.expertise-cart-title {
+  font-size: 20px;
+  font-family: "Teachers";
+  font-weight: 500;
+}
+
+.expertise-cart-text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .center-hero-section-holder,
@@ -265,11 +334,17 @@
   .features-img {
     height: 100%;
   }
+
+  .expertise-section-carts-holder {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 820px) {
   .mission-section,
-  .features-section {
+  .features-section,
+  .expertise-section {
     padding: 40px 0px;
   }
 
@@ -330,5 +405,14 @@
   .feature-cart:nth-child(5) {
     grid-column: auto;
     grid-row: auto;
+  }
+
+  .expertise-section-carts-holder {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-cart:nth-child(1),
+  .expertise-cart:nth-child(2) {
+    grid-column: auto;
   }
 }
