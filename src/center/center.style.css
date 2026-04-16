@@ -300,9 +300,11 @@
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .center-hero-section-holder,
+  .center-hero-section-text-holder,
   .mission-section-holder,
   .features-section-holder {
     width: 95%;
+    margin: 0px auto;
   }
 }
 

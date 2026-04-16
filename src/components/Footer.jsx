@@ -15,9 +15,12 @@ const Footer = () => {
               <Link to="/ocentru" className="footer-nav-item-link">
                 <li className="footer-nav-item">O centru</li>
               </Link>
+
               <li className="footer-nav-item">O meni</li>
               <li className="footer-nav-item">Usluge</li>
-              <li className="footer-nav-item">Kontakt</li>
+              <Link to="/kontakt" className="footer-nav-item-link">
+                <li className="footer-nav-item">Kontakt</li>
+              </Link>
             </ul>
           </nav>
           <div className="footer-socials-holder">
