@@ -1,9 +1,11 @@
+import { Wave } from "../assets/Images";
 import "./center.style.css";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 const CenterHeroSection = () => {
   return (
     <section className="center-hero-section">
+      <Wave className="hero-bg-shape" />
       <div className="center-hero-section-holder">
         <div className="center-hero-section-text-holder">
           <h1 className="center-hero-title hero-section-title">

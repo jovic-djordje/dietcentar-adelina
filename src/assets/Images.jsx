@@ -13,6 +13,7 @@ import testimonialImgSix from "./testimonial-img-six.png";
 import ctaImg from "./cta-img.png";
 import missionImg from "./mission-img.jpeg";
 import featuresImg from "./features-img.jpg";
+import wave from "./wave-haikei.svg";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -132,6 +133,12 @@ const FeaturesImg = ({ className }) => {
   );
 };
 
+const Wave = ({ className }) => {
+  return (
+    <img src={wave} alt="center hero section image" className={className} />
+  );
+};
+
 export {
   Logo,
   LogoLight,
@@ -148,4 +155,5 @@ export {
   CtaImg,
   MissionImg,
   FeaturesImg,
+  Wave,
 };
