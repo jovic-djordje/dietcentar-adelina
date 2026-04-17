@@ -1,0 +1,170 @@
+.offers-section {
+  padding: 90px 0;
+  background-color: hsl(78, 58%, 77%);
+}
+
+.offers-section-holder {
+  max-width: 1285px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.offers-section-text-holder {
+  text-align: center;
+}
+
+/* Tabovi */
+.offers-tabs {
+  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 650px;
+  width: 100%;
+}
+
+.offers-tab {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 1px solid hsl(162, 39%, 22%);
+  background-color: hsl(162, 39%, 22%);
+  color: hsl(78, 58%, 77%);
+  font-size: 15px;
+  font-family: "Teachers", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.offers-tab:hover {
+  background-color: transparent;
+  color: hsl(162, 39%, 22%);
+  border: 1px solid hsl(162, 39%, 22%);
+}
+
+.offers-tab--active {
+  background-color: hsl(78, 58%, 77%);
+  border-color: hsl(162, 39%, 22%);
+  color: hsl(162, 39%, 22%);
+  font-weight: 500;
+}
+
+/* Sadržaj */
+.offers-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 40px 0px;
+  background-color: hsl(162, 39%, 22%);
+  border-radius: 20px;
+}
+
+.offer-content-width {
+  width: 95%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.offers-content-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.offers-content-title {
+  font-family: "Teachers", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: hsl(94, 54%, 95%);
+}
+
+.offers-content-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: hsl(94, 54%, 95%);
+  padding-bottom: 16px;
+  border-bottom: 1px solid hsl(78, 40%, 80%);
+}
+
+.offers-content-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offers-content-list li {
+  font-size: 15px;
+  color: hsl(94, 54%, 95%);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.offers-content-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: hsl(78, 58%, 77%);
+  font-weight: 700;
+}
+
+.offers-content-footer {
+  font-size: 14px;
+  font-style: italic;
+  color: hsl(162, 30%, 85%);
+  margin-top: 8px;
+}
+
+.offers-content-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  padding-top: 8px;
+  max-width: 246px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.offer-section-btn {
+  background-color: hsl(78, 58%, 77%);
+  color: hsl(162, 39%, 22%);
+}
+
+.offer-section-btn:hover {
+  border: 1px solid hsl(78, 58%, 77%);
+  background: transparent;
+  color: hsl(94, 54%, 95%);
+}
+
+.offer-btn-icon-holder {
+  background-color: hsl(162, 39%, 22%);
+}
+
+.offer-btn-icon {
+  color: hsl(78, 58%, 77%);
+}
+
+/* Responsive */
+@media screen and (max-width: 820px) {
+  .offer-content-width {
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .offers-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 820px;
+  }
+
+  .offers-section {
+    padding: 40px 0px;
+  }
+}
