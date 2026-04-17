@@ -9,7 +9,9 @@ const Footer = () => {
     <footer>
       <div className="footer-holder">
         <div className="footer-nav-holder">
-          <FooterLogo className="footer-logo" />
+          <Link to="/" className="footer-nav-item-link">
+            <FooterLogo className="footer-logo" />
+          </Link>
           <nav className="footer-nav">
             <ul className="footer-nav-item-holder">
               <Link to="/ocentru" className="footer-nav-item-link">
@@ -17,7 +19,9 @@ const Footer = () => {
               </Link>
 
               <li className="footer-nav-item">O meni</li>
-              <li className="footer-nav-item">Usluge</li>
+              <Link to="/usluge" className="footer-nav-item-link">
+                <li className="footer-nav-item">Usluge</li>
+              </Link>
               <Link to="/kontakt" className="footer-nav-item-link">
                 <li className="footer-nav-item">Kontakt</li>
               </Link>
