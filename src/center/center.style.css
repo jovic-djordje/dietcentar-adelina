@@ -341,6 +341,7 @@ a.btn:active {
   .mission-section-holder,
   .features-section-holder {
     width: 95%;
+    margin: 0px auto;
   }
 }
 

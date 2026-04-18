@@ -112,6 +112,13 @@
   text-decoration: none;
 }
 
+.cta-section,
+.about-section,
+.location,
+.mission-section {
+  overflow: hidden;
+}
+
 /* ========================
    HERO
 ======================== */
