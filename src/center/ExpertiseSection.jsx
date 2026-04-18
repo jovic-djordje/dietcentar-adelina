@@ -1,4 +1,23 @@
 import "./center.style.css";
+import { motion } from "motion/react";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 const ExpertiseSection = () => {
   const expertises = [
@@ -20,7 +39,6 @@ const ExpertiseSection = () => {
       title: "Edukacija i savjetovanje za dugoročne promjene",
       text: "Učite kako pravilna ishrana mijenja vaš kvalitet života",
     },
-
     {
       id: 4,
       num: "04",
@@ -28,13 +46,13 @@ const ExpertiseSection = () => {
       text: "Dugoročne strategije za održavanje zdrave tjelesne mase",
     },
     {
-      id: "5",
+      id: 5,
       num: "05",
       title: "Nutritivna podrška za mentalno zdravlje",
       text: "Ishrana kao alat za ublažavanje anksioznosti i stresa",
     },
     {
-      id: "6",
+      id: 6,
       num: "06",
       title: "Online konsultacije bez granica",
       text: "Gdje god se nalazili, možete računati na našu podršku",
@@ -44,7 +62,13 @@ const ExpertiseSection = () => {
   return (
     <section className="expertise-section">
       <div className="expertise-section-holder features-section-holder">
-        <div className="expertise-section-text-holder features-section-text-holder">
+        <motion.div
+          className="expertise-section-text-holder features-section-text-holder"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <h4>Stručnost</h4>
           <h2 className="expertise-section-title features-section-title">
             Na koji način vas podržavamo
@@ -53,21 +77,31 @@ const ExpertiseSection = () => {
             Pored kliničkog rada, Centar pruža i stručnu podršku u svim ključnim
             oblastima
           </p>
-        </div>
+        </motion.div>
 
-        <div className="expertise-section-carts-holder">
+        <motion.div
+          className="expertise-section-carts-holder"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+        >
           {expertises.map((expertise) => (
-            <div className="expertise-cart" key={expertise.id}>
-              <div className="expertise-cart-width ">
+            <motion.div
+              className="expertise-cart"
+              key={expertise.id}
+              variants={cardVariants}
+            >
+              <div className="expertise-cart-width">
                 <span>{expertise.num}</span>
                 <div className="exeprtise-cart-text-holder">
                   <h3 className="expertise-cart-title">{expertise.title}</h3>
                   <p className="expertise-cart-text">{expertise.text}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

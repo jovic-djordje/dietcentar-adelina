@@ -1,15 +1,131 @@
+/* ========================
+   CSS VARIJABLE
+======================== */
+:root {
+  --color-dark: hsl(162, 39%, 22%);
+  --color-light: hsl(94, 54%, 95%);
+  --color-accent: hsl(78, 58%, 77%);
+
+  --font-primary: "Teachers", sans-serif;
+
+  --section-padding: 90px 0px;
+  --container-max-width: 1285px;
+  --border-radius-card: 20px;
+  --border-radius-btn: 30px;
+}
+
+/* ========================
+   SHARED / ZAJEDNIČKI STILOVI
+======================== */
+
+/* Svi section holdersi koji centriraju sadržaj */
+.offer-section-holder,
+.about-section-holder,
+.test-section-holder,
+.location-section-holder,
+.cta-section-holder,
+.hero-inner {
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Sekcije sa istim paddingom */
+.offer-section,
+.about-section,
+.test-section,
+.location,
+.cta-section {
+  padding: var(--section-padding);
+}
+
+/* Naslovi sekcija (45px) */
+.offer-section-title,
+.about-section-title,
+.test-section-title,
+.location-title,
+.cta-section-title {
+  font-size: 45px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+}
+
+/* Tekstovi sekcija */
+.offer-section-text,
+.about-section-text,
+.test-section-text,
+.location-text,
+.cta-section-text,
+.hero-section-text {
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* Flex column + gap 12px (text holdersi) */
+.offer-section-text-holder,
+.test-section-text-holder,
+.location-text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Dugmad — zajednička baza */
+.hero-section-btn,
+.about-section-btn,
+.location-section-btn,
+.cta-section-btn {
+  width: 100%;
+  font-family: var(--font-primary);
+  padding: 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--border-radius-btn);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 15px;
+  border: 1px solid var(--color-dark);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.25s ease;
+}
+
+.hero-section-btn:hover,
+.about-section-btn:hover,
+.location-section-btn:hover,
+.cta-section-btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  transform: translateY(-3px);
+}
+
+/* Link wrapperi za dugmad */
+.hero-btn-link,
+.btn-link {
+  width: 100%;
+  text-decoration: none;
+}
+
+/* ========================
+   HERO
+======================== */
 .hero {
   height: 100vh;
   position: relative;
 }
 
 .hero-section-holder {
-  position: relative; /* Potrebno za absolute img */
+  position: relative;
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* background-image: ukloni ovo */
 }
 
 .hero-desktop-img {
@@ -19,16 +135,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top; /* Podesi koji dio slike je fokus */
+  object-position: center top;
   z-index: 0;
 }
 
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 1285px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .hero-section-text-holder {
@@ -42,35 +155,21 @@
 }
 
 .hero-section-title {
-  font-family: "Teachers";
+  font-family: var(--font-primary);
   font-weight: 500;
   font-size: 60px;
 }
 
-.hero-section-text {
-  line-height: 1.7;
-  font-size: 17px;
-}
-
 .hero-section-btn {
   max-width: 310px;
-  width: 100%;
-  font-family: "Teachers";
-  padding: 8px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 30px;
-  border: none;
-  background-color: hsl(162, 39%, 22%);
-  color: hsl(94, 54%, 95%);
-  font-size: 15px;
-  border: 1px solid hsl(162, 39%, 22%);
+}
+
+.hero-btn-link {
+  max-width: 310px;
 }
 
 .hero-btn-icon-holder {
-  background-color: hsl(78, 58%, 77%);
+  background-color: var(--color-accent);
   width: 30px;
   height: 30px;
   border: none;
@@ -78,26 +177,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .hero-btn-icon {
-  color: hsl(162, 39%, 22%);
+  color: var(--color-dark);
   font-size: 18px;
-}
-
-.hero-section-btn:hover {
-  background-color: hsl(78, 58%, 77%);
-  cursor: pointer;
-  color: hsl(162, 39%, 22%);
 }
 
 .hero-mobile-img {
   display: none;
 }
 
-/* BANNER SECTION */
+/* ========================
+   BANNER
+======================== */
 .banner {
-  background-color: hsl(78, 58%, 77%);
+  background-color: var(--color-accent);
   padding: 20px 0px;
   overflow: hidden;
   margin-bottom: 40px;
@@ -122,10 +218,10 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-dark);
   white-space: nowrap;
   padding: 0 20px;
-  font-family: "Teachers";
+  font-family: var(--font-primary);
   font-weight: 500;
 }
 
@@ -140,18 +236,13 @@
   }
   to {
     transform: translateX(-50%);
-  } /* -50% jer je sadržaj duppliciran */
+  }
 }
 
-/* OFFER SECTION */
-.offer-section {
-  padding: 90px 0px;
-}
-
+/* ========================
+   OFFER SECTION
+======================== */
 .offer-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,23 +251,7 @@
 }
 
 .offer-section-text-holder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  gap: 12px;
-}
-
-.offer-section-title {
-  font-size: 45px;
-  font-weight: 500;
-  font-family: "Teachers";
-}
-
-.offer-section-text {
-  line-height: 1.7;
-  font-size: 17px;
 }
 
 .offer-carts-holder {
@@ -188,11 +263,11 @@
 }
 
 .offer-cart {
-  background-color: hsl(78, 58%, 77%);
+  background-color: var(--color-accent);
   border: none;
-  border-radius: 20px;
+  border-radius: var(--border-radius-card);
   padding: 24px 0px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-dark);
 }
 
 .offer-cart-width {
@@ -219,7 +294,7 @@
 }
 
 .offer-cart-title {
-  font-family: "Teachers";
+  font-family: var(--font-primary);
   font-weight: 500;
   font-size: 20px;
 }
@@ -229,15 +304,10 @@
   line-height: 1.7;
 }
 
-/* ABOUT SECTION */
-.about-section {
-  padding: 90px 0px;
-}
-
+/* ========================
+   ABOUT SECTION
+======================== */
 .about-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0px auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -247,7 +317,7 @@
 
 .about-section-img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: var(--border-radius-card);
   height: 100%;
   object-fit: cover;
 }
@@ -260,61 +330,32 @@
   gap: 20px;
 }
 
-.about-section-title {
-  font-size: 45px;
-  font-weight: 500;
-  font-family: "Teachers";
-}
-
-.about-section-text {
-  font-size: 17px;
-  line-height: 1.7;
-}
-
 .about-section-btn {
   max-width: 180px !important;
-  width: 100%;
 }
 
-/* TESTIMONIAL SECTION */
-.test-section {
-  padding: 90px 0px;
+.btn-link {
+  max-width: 185px;
 }
 
+/* ========================
+   TESTIMONIAL SECTION
+======================== */
 .test-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 36px;
-  background-color: hsl(162, 39%, 22%);
-  border-radius: 20px;
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-card);
   overflow: hidden;
   padding: 40px 0px;
 }
 
 .test-section-text-holder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 12px;
-  color: hsl(94, 54%, 95%);
+  color: var(--color-light);
   text-align: center;
-}
-
-.test-section-title {
-  font-size: 45px;
-  font-weight: 500;
-  font-family: "Teachers";
-}
-
-.test-section-text {
-  line-height: 1.7;
-  font-size: 17px;
 }
 
 .test-marquee-wrapper {
@@ -333,16 +374,14 @@
   width: 80px;
   z-index: 2;
   pointer-events: none;
+  background-color: var(--color-dark);
 }
 
 .test-marquee-wrapper::before {
   left: 0;
-  background-color: hsl(162, 39%, 22%);
 }
-
 .test-marquee-wrapper::after {
   right: 0;
-  background-color: hsl(162, 39%, 22%);
 }
 
 .test-marquee-wrapper:hover .test-marquee-track {
@@ -368,8 +407,8 @@
 
 .testimonial-cart {
   max-width: 310px;
-  background-color: hsl(94, 54%, 95%);
-  border-radius: 20px;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-card);
   padding: 24px 0px;
   display: flex;
   flex-direction: column;
@@ -388,14 +427,14 @@
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-dark);
   font-size: 18px;
 }
 
 .test-cart-text {
   font-size: 15px;
   line-height: 1.7;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-dark);
 }
 
 .test-cart-profile-holder {
@@ -408,18 +447,13 @@
 .test-cart-name {
   font-weight: 500;
   font-size: 15px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-dark);
 }
 
-/* LOCATION SECTION */
-.location {
-  padding: 90px 0px;
-}
-
+/* ========================
+   LOCATION SECTION
+======================== */
 .location-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -428,22 +462,7 @@
 }
 
 .location-text-holder {
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.location-title {
-  font-family: "Teachers";
-  font-size: 45px;
-  font-weight: 500;
-}
-
-.location-text {
-  font-size: 17px;
-  line-height: 1.7;
 }
 
 .location-info {
@@ -464,7 +483,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(78, 58%, 77%);
+  background-color: var(--color-accent);
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -472,7 +491,7 @@
 
 .location-section-icon {
   font-size: 24px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-dark);
 }
 
 .address-info-holder {
@@ -481,7 +500,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 4px;
-  font-family: "Teachers";
+  font-family: var(--font-primary);
   font-weight: 500;
 }
 
@@ -491,23 +510,18 @@
 
 .map {
   width: 100%;
-  border-radius: 20px;
+  border-radius: var(--border-radius-card);
 }
 
-/* CTA SECTION */
-.cta-section {
-  padding: 90px 0px;
-}
-
+/* ========================
+   CTA SECTION
+======================== */
 .cta-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(78, 58%, 77%);
-  border-radius: 20px;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-card);
   position: relative;
   overflow: visible;
   background-image: url(/src/assets/logo.webp);
@@ -525,18 +539,7 @@
   gap: 20px;
   max-width: 480px;
   width: 100%;
-  color: hsl(162, 39%, 22%);
-}
-
-.cta-section-title {
-  font-size: 45px;
-  font-weight: 500;
-  font-family: "Teachers";
-}
-
-.cta-section-text {
-  font-size: 17px;
-  line-height: 1.7;
+  color: var(--color-dark);
 }
 
 .cta-section-btn {
@@ -547,7 +550,7 @@
 .cta-img-wrapper {
   flex-shrink: 0;
   z-index: 2;
-  align-self: flex-end; /* ← slika poravnata prema dnu */
+  align-self: flex-end;
 }
 
 .cta-section-img {
@@ -559,7 +562,9 @@
   margin-right: 40px;
 }
 
-/* MEDIA QUERIES */
+/* ========================
+   MEDIA QUERIES
+======================== */
 @media screen and (max-width: 1285px) {
   .hero-inner,
   .offer-carts-holder,
@@ -576,66 +581,43 @@
   .hero-section-text-holder {
     max-width: 500px;
   }
-
   .hero-section-title {
     font-size: 50px;
-  }
-
-  .hero-section-text {
-    font-size: 15px;
-  }
-
-  .offer-section-title {
-    font-size: 40px;
-  }
-
-  .offer-section-text {
-    font-size: 15px;
   }
 
   .offer-carts-holder {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-section-title {
+  .offer-section-title,
+  .about-section-title,
+  .test-section-title,
+  .location-title,
+  .cta-section-title {
     font-size: 40px;
   }
 
-  .about-section-text {
+  .offer-section-text,
+  .about-section-text,
+  .test-section-text,
+  .location-text,
+  .cta-section-text,
+  .hero-section-text {
     font-size: 15px;
   }
 
   .test-section-text-holder {
     width: 85%;
   }
-
-  .test-section-title {
-    font-size: 40px;
-  }
-
-  .test-section-text {
-    font-size: 15px;
-  }
-
   .testimonial-cart {
     max-width: 250px;
   }
-
   .test-marquee-wrapper {
     padding-bottom: 0;
   }
-
   .test-marquee-wrapper::before,
   .test-marquee-wrapper::after {
     width: 30px;
-  }
-
-  .location-title {
-    font-size: 40px;
-  }
-
-  .location-text {
-    font-size: 15px;
   }
 
   .address-info-holder {
@@ -648,14 +630,6 @@
     background-size: 650px 550px;
   }
 
-  .cta-section-title {
-    font-size: 40px;
-  }
-
-  .cta-section-text {
-    font-size: 15px;
-  }
-
   .cta-section-img {
     width: 400px;
     margin-right: 30px;
@@ -664,20 +638,17 @@
 
 @media screen and (max-width: 820px) {
   .hero {
-    height: auto; /* Ne fiksna 100vh — sadržaj određuje visinu */
+    height: auto;
   }
-
   .hero-desktop-img {
     display: none;
   }
-
   .hero-section-holder {
     background-image: none;
     flex-direction: column;
     align-items: stretch;
     height: auto;
   }
-
   .hero-mobile-img {
     display: block;
     width: 100%;
@@ -685,14 +656,12 @@
     margin-bottom: -80%;
     margin-top: -20%;
   }
-
   .hero-inner {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-
   .hero-section-text-holder {
     max-width: 800px;
     align-items: center;
@@ -735,22 +704,18 @@
     overflow: hidden;
     gap: 36px;
   }
-
   .cta-section-text-holder {
     align-items: center;
     text-align: center;
     z-index: 1;
   }
-
   .cta-section-btn {
     margin-top: 0;
   }
-
   .cta-img-wrapper {
     align-self: center;
     margin-top: 20px;
   }
-
   .cta-section-img {
     width: 100%;
     max-width: 360px;
@@ -764,32 +729,21 @@
     font-size: 40px;
   }
 
-  .offer-section-title {
-    font-size: 35px;
-  }
-
-  .about-section-title {
-    font-size: 35px;
-  }
-
-  .test-section-title {
+  .offer-section-title,
+  .about-section-title,
+  .test-section-title,
+  .cta-section-title {
     font-size: 35px;
   }
 
   .offer-carts-holder {
     grid-template-columns: repeat(1, 1fr);
   }
-
   .location-icon-holder {
     width: 45px;
     height: 45px;
   }
-
   .address-info-holder {
     font-size: 14px;
-  }
-
-  .cta-section-title {
-    font-size: 35px;
   }
 }

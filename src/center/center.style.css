@@ -1,6 +1,123 @@
-/* ABOUT CENTER - HERO SECTION*/
+/* =====================
+   CSS VARIJABLE
+   ===================== */
+:root {
+  --color-green-dark: hsl(162, 39%, 22%);
+  --color-green-light: hsl(94, 54%, 95%);
+  --color-lime: hsl(78, 58%, 77%);
+  --color-green-text: #224e41;
+
+  --section-padding: 90px 0px;
+  --section-padding-mobile: 40px 0px;
+  --max-width: 1285px;
+  --border-radius: 20px;
+  --font-display: "Teachers";
+}
+
+/* =====================
+   SHARED / PONAVLJAJUĆE
+   ===================== */
+
+/* Section holder — ponavlja se 4x */
+.center-hero-section-holder,
+.mission-section-holder,
+.features-section-holder,
+.expertise-section-holder {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0px auto;
+}
+
+/* Naslovi sekcija — ponavlja se na mission i features */
+.mission-section-title,
+.features-section-title {
+  font-size: 45px;
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+/* Tekst sekcija — ponavlja se */
+.mission-section-text,
+.features-section-text {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Kartice — border-radius i padding se ponavljaju */
+.approach,
+.feature-cart,
+.expertise-cart {
+  border-radius: var(--border-radius);
+  padding: 24px 0px;
+}
+
+/* Kartice inner width holder — ponavlja se */
+.feature-cart-width,
+.expertise-cart-width {
+  width: 85%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+/* Cart text holder — ponavlja se */
+.features-cart-text-holder,
+.exeprtise-cart-text-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Cart naslovi — ponavlja se */
+.approach-title,
+.feature-cart-title,
+.expertise-cart-title {
+  font-size: 20px;
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+/* Cart tekstovi — ponavlja se */
+.approach-text,
+.feature-cart-text,
+.expertise-cart-text {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Dugmad — smooth hover transform */
+button,
+.btn,
+a.btn {
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+a.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+button:active,
+.btn:active,
+a.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================
+   HERO SECTION
+   ===================== */
 .center-hero-section {
-  background-color: hsl(94, 54%, 95%);
+  background-color: var(--color-green-light);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -19,9 +136,6 @@
 }
 
 .center-hero-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,16 +153,15 @@
   z-index: 1;
 }
 
-/* ABOUT CENTER - MISSION SECTION */
+/* =====================
+   MISSION SECTION
+   ===================== */
 .mission-section {
-  padding: 90px 0px;
-  background-color: hsl(162, 39%, 22%);
+  padding: var(--section-padding);
+  background-color: var(--color-green-dark);
 }
 
 .mission-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0px auto;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -58,7 +171,7 @@
 
 .mission-img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   height: 100%;
   object-fit: cover;
 }
@@ -69,19 +182,11 @@
   justify-content: center;
   align-items: flex-start;
   gap: 24px;
-  color: hsl(94, 54%, 95%);
+  color: var(--color-green-light);
 }
 
 .mission-section-title {
-  font-size: 45px;
-  font-family: "Teachers";
-  font-weight: 500;
-  color: hsl(94, 54%, 95%);
-}
-
-.mission-section-text {
-  font-size: 17px;
-  line-height: 1.7;
+  color: var(--color-green-light);
 }
 
 .mission-section-approach-text-holder {
@@ -97,32 +202,23 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 12px;
-  background-color: hsl(78, 58%, 77%);
+  background-color: var(--color-lime);
   padding: 20px;
-  border-radius: 20px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-green-dark);
 }
 
 .approach-title {
-  font-family: "Teachers";
-  font-weight: 500;
-  font-size: 20px;
-  color: #224e41;
+  color: var(--color-green-text);
 }
 
-.approach-text {
-  font-size: 15px !important;
-}
-
-/* ABOUT CENTER - FEATURES SECTION*/
+/* =====================
+   FEATURES SECTION
+   ===================== */
 .features-section {
-  padding: 90px 0px;
+  padding: var(--section-padding);
 }
 
 .features-section-holder {
-  max-width: 1285px;
-  width: 100%;
-  margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,17 +241,6 @@
   font-weight: 500;
 }
 
-.features-section-title {
-  font-size: 45px;
-  font-weight: 500;
-  font-family: "Teachers";
-}
-
-.features-section-text {
-  font-size: 17px;
-  line-height: 1.7;
-}
-
 .features-section-carts-holder {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
@@ -171,12 +256,10 @@
   grid-column: 1;
   grid-row: 2;
 }
-
 .features-section-carts-holder > .features-img {
   grid-column: 2;
   grid-row: 1 / 3;
 }
-
 .feature-cart:nth-child(4) {
   grid-column: 3;
   grid-row: 1;
@@ -190,53 +273,36 @@
   height: 550px;
   object-fit: cover;
   width: 100%;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
 }
 
 .feature-cart {
-  border-radius: 20px;
-  padding: 24px 0px;
-  background-color: hsl(78, 58%, 77%);
+  background-color: var(--color-lime);
 }
 
 .feature-cart-width {
-  width: 85%;
-  margin: 0px auto;
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
-  gap: 36px;
 }
 
 .features-cart-text-holder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 12px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-green-dark);
 }
 
 .features-icon {
   font-size: 28px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-green-dark);
 }
 
-.feature-cart-title {
-  font-size: 20px;
-  font-family: "Teachers";
-  font-weight: 500;
+.features-img-wrapper {
+  grid-column: 2;
+  grid-row: 1 / 3;
 }
 
-.feature-cart-text {
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-/* ABOUT CENTER - EXPERTISE SECTION */
+/* =====================
+   EXPERTISE SECTION
+   ===================== */
 .expertise-section {
-  padding: 90px 0px;
+  padding: var(--section-padding);
 }
 
 .expertise-section-carts-holder {
@@ -245,92 +311,52 @@
   gap: 20px;
 }
 
-/* Prva dva elementa — veće kartice, svaka zauzima 1.5 kolone */
 .expertise-cart:nth-child(1) {
-  grid-column: 1 / 2; /* Zauzima kolone 1 i 2 */
+  grid-column: 1 / 2;
 }
-
 .expertise-cart:nth-child(2) {
-  grid-column: 2 / 3; /* Zauzima kolone 3 i 4 */
+  grid-column: 2 / 3;
 }
 
 .expertise-cart {
-  padding: 24px 0px;
-  border-radius: 20px;
-  background-color: hsl(162, 39%, 22%);
+  background-color: var(--color-green-dark);
 }
 
 .expertise-cart-width {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  width: 85%;
-  margin: 0px auto;
-  gap: 36px;
-  color: hsl(94, 54%, 95%);
+  color: var(--color-green-light);
 }
 
 .expertise-cart-width span {
   font-weight: 700;
   font-size: 20px;
-  color: hsl(78, 58%, 77%);
+  color: var(--color-lime);
 }
 
-.exeprtise-cart-text-holder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.expertise-cart-title {
-  font-size: 20px;
-  font-family: "Teachers";
-  font-weight: 500;
-}
-
-.expertise-cart-text {
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-/* MEDIA QUERIES */
+/* =====================
+   MEDIA QUERIES
+   ===================== */
 @media screen and (max-width: 1285px) {
   .center-hero-section-holder,
   .center-hero-section-text-holder,
   .mission-section-holder,
   .features-section-holder {
     width: 95%;
-    margin: 0px auto;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .mission-section-title {
+  .mission-section-title,
+  .features-section-title {
     font-size: 40px;
   }
 
-  .mission-section-text {
-    font-size: 15px;
-  }
-
-  .approach-text {
-    font-size: 14px !important;
-  }
-
-  .approach-title {
-    font-size: 18px;
-  }
-
+  .mission-section-text,
   .features-section-text {
     font-size: 15px;
   }
 
-  .features-section-title {
-    font-size: 40px;
+  .approach-title {
+    font-size: 18px;
   }
 
   .features-img {
@@ -347,11 +373,11 @@
   .mission-section,
   .features-section,
   .expertise-section {
-    padding: 40px 0px;
+    padding: var(--section-padding-mobile);
   }
 
   .mission-section-holder {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     gap: 28px;
   }
 
@@ -359,16 +385,11 @@
     grid-row: 2;
   }
 
-  .approach-text {
-    font-size: 15px !important;
-  }
-
   .features-section-carts-holder {
-    grid-template-columns: 1fr 1fr; /* 2 kartice u redu */
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
 
-  /* Reset sve eksplicitne pozicije */
   .feature-cart:nth-child(1),
   .feature-cart:nth-child(2),
   .feature-cart:nth-child(4),
@@ -377,8 +398,7 @@
     grid-row: auto;
   }
 
-  /* Slika zadnja, puna širina */
-  .features-section-carts-holder > .features-img {
+  .features-img-wrapper {
     grid-column: 1 / -1;
     grid-row: auto;
     order: 1;
@@ -396,11 +416,10 @@
   }
 
   .features-section-carts-holder {
-    grid-template-columns: 1fr; /* Jedna kolona */
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
 
-  /* Reset sve eksplicitne pozicije */
   .feature-cart:nth-child(1),
   .feature-cart:nth-child(2),
   .feature-cart:nth-child(4),

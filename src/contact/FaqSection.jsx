@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./contact.style.css";
 import { HiArrowNarrowDown } from "react-icons/hi";
+import { motion, AnimatePresence } from "motion/react";
 
 const faqs = [
   {
@@ -35,6 +36,22 @@ const faqs = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
+
 const FaqSection = () => {
   const [openId, setOpenId] = useState(null);
 
@@ -45,34 +62,63 @@ const FaqSection = () => {
   return (
     <section className="faq-section">
       <div className="faq-section-holder">
-        <div className="faq-section-text-holder offer-section-text-holder">
+        <motion.div
+          className="faq-section-text-holder offer-section-text-holder"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <h2 className="faq-section-title offer-section-title">
             Česta pitanja
           </h2>
           <p className="faq-section-text offer-section-text">
             Odgovori na pitanja koja često čujemo od novih klijenata.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="faq-list">
+        <motion.div
+          className="faq-list"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+        >
           {faqs.map((faq) => (
-            <div
+            <motion.div
               className={`faq-item ${openId === faq.id ? "faq-item--open" : ""}`}
               key={faq.id}
               onClick={() => toggle(faq.id)}
+              variants={itemVariants}
             >
               <div className="faq-item-header">
                 <h3 className="faq-item-question">{faq.question}</h3>
-                <div className="faq-item-icon-holder">
+                <motion.div
+                  className="faq-item-icon-holder"
+                  animate={{ rotate: openId === faq.id ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
                   <HiArrowNarrowDown className="faq-item-icon" />
-                </div>
+                </motion.div>
               </div>
-              {openId === faq.id && (
-                <p className="faq-item-answer">{faq.answer}</p>
-              )}
-            </div>
+
+              <AnimatePresence initial={false}>
+                {openId === faq.id && (
+                  <motion.p
+                    className="faq-item-answer"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    style={{ overflow: "hidden" }}
+                  >
+                    {faq.answer}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

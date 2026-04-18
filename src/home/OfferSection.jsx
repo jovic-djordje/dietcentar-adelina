@@ -3,6 +3,25 @@ import { IoBody } from "react-icons/io5";
 import { IoNutrition } from "react-icons/io5";
 import { FaClipboardList } from "react-icons/fa6";
 import { BsClipboard2HeartFill } from "react-icons/bs";
+import { motion } from "motion/react";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 const OfferSection = () => {
   const carts = [
@@ -35,15 +54,32 @@ const OfferSection = () => {
   return (
     <section className="offer-section">
       <div className="offer-section-holder">
-        <div className="offer-section-text-holder">
+        <motion.div
+          className="offer-section-text-holder"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <h2 className="offer-section-title">Odaberi svoj paket usluga</h2>
           <p className="offer-section-text">
             Usluge su formirane na osnovu individualnih potreba svakog klijenta
           </p>
-        </div>
-        <div className="offer-carts-holder">
+        </motion.div>
+
+        <motion.div
+          className="offer-carts-holder"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {carts.map((cart) => (
-            <div className="offer-cart" key={cart.id}>
+            <motion.div
+              className="offer-cart"
+              key={cart.id}
+              variants={cardVariants}
+            >
               <div className="offer-cart-width">
                 {cart.icon}
                 <div className="offer-cart-text-holder">
@@ -51,9 +87,9 @@ const OfferSection = () => {
                   <p className="offer-cart-text">{cart.text}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -5,10 +5,12 @@ import Footer from "./components/Footer";
 import CenterHome from "./center/CenterHome";
 import Contact from "./contact/Contact";
 import Offers from "./offers/Offers";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />

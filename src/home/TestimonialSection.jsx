@@ -8,6 +8,7 @@ import {
 } from "../assets/Images";
 import "./home.style.css";
 import { FaStar } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -58,13 +59,26 @@ const TestimonialSection = () => {
   return (
     <section className="test-section">
       <div className="test-section-holder">
-        <div className="test-section-text-holder">
+        <motion.div
+          className="test-section-text-holder"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <h3 className="test-section-title">Iskustva klijenata</h3>
           <p className="test-section-text">
             Saznajte što kažu oni koji su već transformisali svoje zdravlje
           </p>
-        </div>
-        <div className="test-marquee-wrapper">
+        </motion.div>
+
+        <motion.div
+          className="test-marquee-wrapper"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="test-marquee-track">
             {[...testimonials, ...testimonials].map((test, index) => (
               <div className="testimonial-cart" key={index}>
@@ -85,7 +99,7 @@ const TestimonialSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

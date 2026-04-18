@@ -1,16 +1,31 @@
+/* ========================
+   CSS VARIJABLE
+======================== */
+:root {
+  --color-primary: hsl(162, 39%, 22%);
+  --color-accent: hsl(78, 58%, 77%);
+  --color-light: hsl(94, 54%, 95%);
+
+  --max-width: 1285px;
+  --nav-gap: 24px;
+}
+
+/* ========================
+   HEADER
+======================== */
 header {
   padding-top: 30px;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 .header-holder {
-  max-width: 1285px;
+  max-width: var(--max-width);
   width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -19,8 +34,9 @@ header {
 
 .header-ham-btn {
   font-size: 36px;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-primary);
   cursor: pointer;
+  z-index: 100;
 }
 
 .logo {
@@ -28,11 +44,14 @@ header {
   height: 50px;
 }
 
+/* ========================
+   NAV
+======================== */
 .nav-holder {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: var(--nav-gap);
   list-style: none;
 }
 
@@ -44,74 +63,135 @@ header {
   max-width: 120px;
   width: 100%;
   font-family: inherit;
-  background-color: hsl(162, 39%, 22%);
-  border: none;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 20px;
   padding: 8px 0px;
-  color: hsl(0, 0%, 100%);
+  color: var(--color-white);
   font-size: 15px;
   cursor: pointer;
-  border: 1px solid hsl(162, 39%, 22%);
 }
 
 .nav-btn:hover {
-  background-color: hsl(78, 58%, 77%);
-  color: hsl(162, 39%, 22%);
+  background-color: var(--color-accent);
+  color: var(--color-primary);
 }
 
-/*FOOTER*/
+/* ========================
+   MOBILE MENU
+======================== */
+.off-screen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-accent);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s ease;
+}
+
+.off-screen-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Grupovano: oba cenriraju sadrzaj na 100vh */
+.off-screen-menu-holder,
+.off-screen-menu-holder ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.off-screen-menu-holder {
+  height: 100vh;
+}
+
+.off-screen-menu-holder ul {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.off-screen-menu-item {
+  list-style: none;
+  font-size: 36px;
+  color: var(--color-primary);
+}
+
+.off-screen-menu-link {
+  text-decoration: none;
+}
+
+/* ========================
+   FOOTER
+======================== */
 footer {
   padding-top: 40px;
-  background-color: hsl(162, 39%, 22%);
+  background-color: var(--color-primary);
 }
 
 .footer-holder {
-  max-width: 1285px;
+  max-width: var(--max-width);
   width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .footer-nav-holder {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: var(--nav-gap);
 }
 
-.footer-nav-item-holder {
+/* Grupovano: footer nav i socials dijele isti flex pattern */
+.footer-nav-item-holder,
+.footer-socials-holder {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+}
+
+.footer-nav-item-holder {
+  gap: var(--nav-gap);
   list-style: none;
-  color: hsl(94, 54%, 95%);
+}
+
+.footer-socials-holder {
+  gap: 12px;
 }
 
 .footer-nav-item {
   cursor: pointer;
+  color: hsl(94, 54%, 95%);
+}
+
+/* Grupovano: footer linkovi i logo dijele isti color */
+.footer-nav-item-link,
+.footer-logo,
+.footer-social-icon,
+.footer-attribute {
+  color: hsl(94, 54%, 95%);
 }
 
 .footer-nav-item-link {
   text-decoration: none;
-  color: hsl(94, 54%, 95%);
 }
 
 .footer-logo {
   width: 65px;
   height: 50px;
-  color: hsl(94, 54%, 95%);
-}
-
-.footer-socials-holder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
 }
 
 .footer-social-icon {
   font-size: 22px;
-  color: hsl(94, 54%, 95%);
   cursor: pointer;
 }
 
@@ -120,19 +200,17 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid hsl(94, 54%, 95%);
-  padding: 30px 0px;
+  padding: 30px 0;
   margin-top: 20px;
   font-family: "Teachers";
-  color: hsl(94, 54%, 95%);
   font-size: 14px;
 }
 
-/* MEDIA QUERIES */
+/* ========================
+   MEDIA QUERIES
+======================== */
 @media screen and (max-width: 1285px) {
-  .footer-holder {
-    width: 95%;
-  }
-
+  .footer-holder,
   .header-holder {
     width: 95%;
   }
@@ -154,10 +232,7 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-  .footer-nav-holder {
-    flex-direction: column;
-  }
-
+  .footer-nav-holder,
   .footer-nav-item-holder {
     flex-direction: column;
   }
