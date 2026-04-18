@@ -1,6 +1,22 @@
+/* ===================== VARIJABLE ===================== */
+:root {
+  --color-bg-light: hsl(78, 58%, 77%);
+  --color-bg-dark: hsl(162, 39%, 22%);
+  --color-text-light: hsl(94, 54%, 95%);
+  --color-text-muted: hsl(162, 30%, 85%);
+  --color-border-light: hsl(78, 40%, 80%);
+
+  --font-primary: "Teachers", sans-serif;
+  --radius-pill: 30px;
+  --radius-card: 20px;
+
+  --transition-base: all 0.2s ease;
+}
+
+/* ===================== SECTION ===================== */
 .offers-section {
   padding: 90px 0;
-  background-color: hsl(78, 58%, 77%);
+  background-color: var(--color-bg-light);
 }
 
 .offers-section-holder {
@@ -16,54 +32,53 @@
   text-align: center;
 }
 
-/* Tabovi */
+/* ===================== TABOVI ===================== */
 .offers-tabs {
-  gap: 12px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
   max-width: 650px;
   width: 100%;
 }
 
 .offers-tab {
   padding: 10px 24px;
-  border-radius: 30px;
-  border: 1px solid hsl(162, 39%, 22%);
-  background-color: hsl(162, 39%, 22%);
-  color: hsl(78, 58%, 77%);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-bg-dark);
+  background-color: var(--color-bg-dark);
+  color: var(--color-bg-light);
   font-size: 15px;
-  font-family: "Teachers", sans-serif;
+  font-family: var(--font-primary);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: var(--transition-base);
 }
 
 .offers-tab:hover {
   background-color: transparent;
-  color: hsl(162, 39%, 22%);
-  border: 1px solid hsl(162, 39%, 22%);
+  color: var(--color-bg-dark);
 }
 
 .offers-tab--active {
-  background-color: hsl(78, 58%, 77%);
-  border-color: hsl(162, 39%, 22%);
-  color: hsl(162, 39%, 22%);
+  background-color: var(--color-bg-light);
+  border-color: var(--color-bg-dark);
+  color: var(--color-bg-dark);
   font-weight: 500;
 }
 
-/* Sadržaj */
+/* ===================== SADRŽAJ ===================== */
 .offers-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 60px;
-  padding: 40px 0px;
-  background-color: hsl(162, 39%, 22%);
-  border-radius: 20px;
+  padding: 40px 0;
+  background-color: var(--color-bg-dark);
+  border-radius: var(--radius-card);
 }
 
 .offer-content-width {
   width: 95%;
-  margin: 0px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -77,19 +92,24 @@
   gap: 16px;
 }
 
+/* Grupisani - isti font-size i color */
+.offers-content-title,
+.offers-content-desc,
+.offers-content-list li {
+  font-size: 15px;
+  color: var(--color-text-light);
+}
+
 .offers-content-title {
-  font-family: "Teachers", sans-serif;
+  font-family: var(--font-primary);
   font-size: 24px;
   font-weight: 500;
-  color: hsl(94, 54%, 95%);
 }
 
 .offers-content-desc {
-  font-size: 15px;
   line-height: 1.7;
-  color: hsl(94, 54%, 95%);
   padding-bottom: 16px;
-  border-bottom: 1px solid hsl(78, 40%, 80%);
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .offers-content-list {
@@ -100,8 +120,6 @@
 }
 
 .offers-content-list li {
-  font-size: 15px;
-  color: hsl(94, 54%, 95%);
   padding-left: 20px;
   position: relative;
   line-height: 1.6;
@@ -111,14 +129,14 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: hsl(78, 58%, 77%);
+  color: var(--color-bg-light);
   font-weight: 700;
 }
 
 .offers-content-footer {
   font-size: 14px;
   font-style: italic;
-  color: hsl(162, 30%, 85%);
+  color: var(--color-text-muted);
   margin-top: 8px;
 }
 
@@ -126,37 +144,41 @@
   flex-shrink: 0;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   height: 100%;
   padding-top: 8px;
   max-width: 246px;
   width: 100%;
-  justify-content: flex-end;
 }
 
+/* ===================== DUGME ===================== */
 .offer-section-btn {
-  background-color: hsl(78, 58%, 77%);
-  color: hsl(162, 39%, 22%);
+  background-color: var(--color-bg-light);
+  color: var(--color-bg-dark);
+  transition:
+    var(--transition-base),
+    transform 0.2s ease;
 }
 
 .offer-section-btn:hover {
-  border: 1px solid hsl(78, 58%, 77%);
+  border: 1px solid var(--color-bg-light);
   background: transparent;
-  color: hsl(94, 54%, 95%);
+  color: var(--color-text-light);
+  transform: translateY(-3px);
 }
 
 .offer-btn-icon-holder {
-  background-color: hsl(162, 39%, 22%);
+  background-color: var(--color-bg-dark);
 }
 
 .offer-btn-icon {
-  color: hsl(78, 58%, 77%);
+  color: var(--color-bg-light);
 }
 
-/* Responsive */
+/* ===================== RESPONSIVE ===================== */
 @media screen and (max-width: 820px) {
-  .offer-content-width {
-    flex-direction: column;
-    width: 85%;
+  .offers-section {
+    padding: 40px 0;
   }
 
   .offers-tabs {
@@ -164,7 +186,8 @@
     max-width: 820px;
   }
 
-  .offers-section {
-    padding: 40px 0px;
+  .offer-content-width {
+    flex-direction: column;
+    width: 85%;
   }
 }

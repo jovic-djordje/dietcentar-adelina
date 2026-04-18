@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import "./offers.style.css";
-import { WaveLight } from "../assets/Images";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "motion/react";
 
 const services = [
   {
@@ -74,7 +75,13 @@ const OfferPlan = () => {
     <section className="offers-section">
       <div className="offers-section-holder">
         {/* Tabovi */}
-        <div className="offers-tabs">
+        <motion.div
+          className="offers-tabs"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           {services.map((s) => (
             <button
               key={s.id}
@@ -84,29 +91,40 @@ const OfferPlan = () => {
               {s.tab}
             </button>
           ))}
-        </div>
+        </motion.div>
 
-        {/* Sadržaj */}
+        {/* Sadržaj — AnimatePresence za mount/unmount animaciju */}
         <div className="offers-content">
           <div className="offer-content-width">
-            <div className="offers-content-left">
-              <h3 className="offers-content-title">{active.title}</h3>
-              <p className="offers-content-desc">{active.description}</p>
-              <ul className="offers-content-list">
-                {active.items.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-              <p className="offers-content-footer">{active.footer}</p>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeId}
+                className="offers-content-left"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                <h3 className="offers-content-title">{active.title}</h3>
+                <p className="offers-content-desc">{active.description}</p>
+                <ul className="offers-content-list">
+                  {active.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                <p className="offers-content-footer">{active.footer}</p>
+              </motion.div>
+            </AnimatePresence>
 
             <div className="offers-content-right">
-              <button className="hero-section-btn offer-section-btn">
-                Zakaži besplatnu konsultaciju
-                <div className="hero-btn-icon-holder offer-btn-icon-holder">
-                  <HiArrowNarrowRight className="hero-btn-icon offer-btn-icon" />
-                </div>
-              </button>
+              <Link to="/kontakt" className="hero-btn-link">
+                <button className="hero-section-btn offer-section-btn">
+                  Zakaži besplatnu konsultaciju
+                  <div className="hero-btn-icon-holder offer-btn-icon-holder">
+                    <HiArrowNarrowRight className="hero-btn-icon offer-btn-icon" />
+                  </div>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { IoBusinessOutline } from "react-icons/io5";
 import { TbSchool } from "react-icons/tb";
 import { FaRegUser } from "react-icons/fa";
 import "./home.style.css";
+import { motion } from "motion/react";
 
 const BannerSection = () => {
   const strips = [
@@ -28,13 +29,11 @@ const BannerSection = () => {
       icon: <TbSchool className="banner-icon" />,
       text: "Edukativni sistemi",
     },
-
     {
       id: 5,
       icon: <IoBusinessOutline className="banner-icon" />,
       text: "Kompanije",
     },
-
     {
       id: 6,
       icon: <FaRegUser className="banner-icon" />,
@@ -43,7 +42,13 @@ const BannerSection = () => {
   ];
 
   return (
-    <section className="banner">
+    <motion.section
+      className="banner"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <div className="banner-holder">
         {/* Original */}
         <div className="banner-strip">
@@ -64,7 +69,8 @@ const BannerSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
+
 export default BannerSection;

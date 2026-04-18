@@ -1,11 +1,32 @@
-/* CONTACT PAGE - FROM SECTION*/
+/* ===================== */
+/* CSS VARIABLES         */
+/* ===================== */
+:root {
+  --color-lime: hsl(78, 58%, 77%);
+  --color-green-dark: hsl(162, 39%, 22%);
+  --color-green-mid: hsl(162, 39%, 30%);
+  --color-input-bg: hsl(94, 54%, 95%);
+  --color-text-dark: hsl(0, 0%, 20%);
+  --color-placeholder: hsl(0, 0%, 52%);
+
+  --section-padding: 90px 0;
+  --section-padding-mobile: 40px 0;
+  --max-width: 1285px;
+  --border-radius-lg: 20px;
+  --border-radius-md: 16px;
+  --border-radius-sm: 8px;
+}
+
+/* ===================== */
+/* CONTACT FORM SECTION  */
+/* ===================== */
 .contact-section {
-  padding: 90px 0;
-  background-color: hsl(78, 58%, 77%);
+  padding: var(--section-padding);
+  background-color: var(--color-lime);
 }
 
 .contact-section-holder {
-  max-width: 1285px;
+  max-width: var(--max-width);
   width: 95%;
   margin: 0 auto;
 }
@@ -13,9 +34,8 @@
 .contact-form-wrapper {
   width: 100%;
   margin: 0 auto;
-  background-color: hsl(162, 39%, 22%);
-  border: none;
-  border-radius: 16px;
+  background-color: var(--color-green-dark);
+  border-radius: var(--border-radius-md);
   padding: 40px;
 }
 
@@ -39,34 +59,35 @@
 
 .contact-form-group label {
   font-size: 14px;
-  color: hsl(78, 58%, 77%);
+  color: var(--color-lime);
   font-weight: 500;
 }
 
 .contact-form-group input,
 .contact-form-group textarea {
   padding: 10px 14px;
-  border: 1px solid hsl(94, 54%, 95%);
-  border-radius: 8px;
+  border: 1px solid var(--color-input-bg);
+  border-radius: var(--border-radius-sm);
   font-size: 14px;
-  color: hsl(0, 0%, 20%);
-  outline: none;
-  transition: border-color 0.2s;
+  color: var(--color-text-dark);
+  background-color: var(--color-input-bg);
   font-family: inherit;
-  background-color: hsl(94, 54%, 95%);
+  outline: none;
   resize: none;
+  transition: border-color 0.2s;
 }
 
 .contact-form-group input::placeholder,
 .contact-form-group textarea::placeholder {
-  color: hsl(0, 0%, 52%);
+  color: var(--color-placeholder);
 }
 
 .contact-form-group input:focus,
 .contact-form-group textarea:focus {
-  border-color: hsl(162, 39%, 22%);
+  border-color: var(--color-green-dark);
 }
 
+/* BUTTON */
 .contact-form-btn-holder {
   display: flex;
   justify-content: flex-end;
@@ -75,31 +96,38 @@
 .contact-form-btn {
   font-family: "Teachers", sans-serif;
   cursor: pointer;
-  transition: background-color 0.2s;
   max-width: 150px;
   width: 100%;
-  background-color: hsl(78, 58%, 77%);
-  color: hsl(162, 39%, 22%);
+  background-color: var(--color-lime);
+  color: var(--color-green-dark);
   font-weight: 500;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border 0.2s,
+    transform 0.2s ease;
 }
 
 .contact-form-btn:hover {
-  background-color: hsl(162, 39%, 22%);
-  color: hsl(78, 58%, 77%);
-  border: 1px solid hsl(78, 58%, 77%);
+  background-color: var(--color-green-dark);
+  color: var(--color-lime);
+  border: 1px solid var(--color-lime);
+  transform: translateY(-3px);
 }
 
 .contact-btn-icon-holder {
-  background-color: hsl(162, 39%, 22%);
+  background-color: var(--color-green-dark);
 }
 
 .contact-form-btn-icon {
-  color: hsl(78, 58%, 77%);
+  color: var(--color-lime);
 }
 
-/* CONTACT PAGE - FAQ SECTION */
+/* ===================== */
+/* FAQ SECTION           */
+/* ===================== */
 .faq-section {
-  padding: 90px 0px;
+  padding: var(--section-padding);
 }
 
 .faq-section-holder {
@@ -108,9 +136,9 @@
   justify-content: center;
   align-items: center;
   gap: 36px;
-  max-width: 1285px;
+  max-width: var(--max-width);
   width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .faq-list {
@@ -123,8 +151,8 @@
 .faq-item {
   padding: 24px 0;
   cursor: pointer;
-  background-color: hsl(78, 58%, 77%);
-  border-radius: 20px;
+  background-color: var(--color-lime);
+  border-radius: var(--border-radius-lg);
 }
 
 .faq-item-header {
@@ -133,51 +161,51 @@
   align-items: center;
   gap: 20px;
   width: 95%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .faq-item-question {
   font-size: 20px;
   font-weight: 500;
-  color: hsl(162, 39%, 22%);
+  color: var(--color-green-dark);
   font-family: "Teachers", sans-serif;
-}
-
-.faq-item-icon {
-  font-size: 18px;
-  color: hsl(78, 58%, 77%);
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.faq-item--open .faq-item-icon {
-  transform: rotate(180deg);
-}
-
-.faq-item-answer {
-  padding-top: 14px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: hsl(162, 39%, 30%);
-  width: 95%;
-  margin: 0px auto;
+  transition: color 0.2s;
 }
 
 .faq-item:hover .faq-item-question {
-  color: hsl(162, 39%, 30%);
+  color: var(--color-green-mid);
 }
 
 .faq-item-icon-holder {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(162, 39%, 22%);
+  background-color: var(--color-green-dark);
   max-width: 30px;
   width: 100%;
   height: 30px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
+.faq-item-icon {
+  font-size: 18px;
+  color: var(--color-lime);
+  transition: transform 0.3s ease;
+}
+
+.faq-item-answer {
+  padding-top: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-green-mid);
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* ===================== */
+/* MEDIA QUERIES         */
+/* ===================== */
 @media screen and (max-width: 1285px) {
   .faq-section-holder {
     width: 95%;
@@ -197,7 +225,7 @@
 
   .contact-section,
   .faq-section {
-    padding: 40px 0px;
+    padding: var(--section-padding-mobile);
   }
 }
 
@@ -208,13 +236,9 @@
 
   .contact-form-btn {
     max-width: 500px;
-    width: 100%;
   }
 
-  .faq-item-header {
-    width: 90%;
-  }
-
+  .faq-item-header,
   .faq-item-answer {
     width: 90%;
   }
