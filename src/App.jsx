@@ -6,6 +6,7 @@ import CenterHome from "./center/CenterHome";
 import Contact from "./contact/Contact";
 import Offers from "./offers/Offers";
 import ScrollToTop from "./ScrollToTop";
+import About from "./about/About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ocentru" element={<CenterHome />} />
+        <Route path="/omeni" element={<About />} />
         <Route path="/usluge" element={<Offers />} />
         <Route path="/kontakt" element={<Contact />} />
       </Routes>
