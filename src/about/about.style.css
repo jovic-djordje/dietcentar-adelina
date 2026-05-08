@@ -1,0 +1,18 @@
+:root {
+  --color-green-dark: hsl(162, 39%, 22%);
+  --color-green-light: hsl(94, 54%, 95%);
+  --color-lime: hsl(78, 58%, 77%);
+  --color-green-text: #224e41;
+
+  --section-padding: 90px 0px;
+  --section-padding-mobile: 40px 0px;
+  --max-width: 1285px;
+  --border-radius: 20px;
+  --font-display: "Teachers";
+}
+
+/* STORY SECTION - ABOUT PAGE*/
+
+.story-section-text {
+  color: var(--color-green-light);
+}
