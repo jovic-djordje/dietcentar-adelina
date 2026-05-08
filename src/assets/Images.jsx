@@ -15,6 +15,7 @@ import missionImg from "./mission-img.jpeg";
 import featuresImg from "./features-img.jpg";
 import wave from "./wave-haikei.svg";
 import waveLight from "./wave-light.svg";
+import storyImg from "./story-section-img.jpg";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -150,6 +151,10 @@ const WaveLight = ({ className }) => {
   );
 };
 
+const StoryImg = ({ className }) => {
+  return <img src={storyImg} alt="" className={className} />;
+};
+
 export {
   Logo,
   LogoLight,
@@ -168,4 +173,5 @@ export {
   FeaturesImg,
   Wave,
   WaveLight,
+  StoryImg,
 };
