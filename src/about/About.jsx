@@ -1,4 +1,5 @@
 import AboutHero from "./AboutHero";
+import FoundationSection from "./FoundationSection";
 import Story from "./Story";
 
 const About = () => {
@@ -6,6 +7,7 @@ const About = () => {
     <>
       <AboutHero />
       <Story />
+      <FoundationSection />
     </>
   );
 };
