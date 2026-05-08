@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from "motion/react";
 const faqs = [
   {
     id: 1,
-    question: "Kako funkcionira konsultacija?",
+    question: "Kako funkcioniše konsultacija?",
     answer:
-      "Početna konsultacija traje oko sat vremena i uključuje detaljnu procjenu vašeg zdravlja, navika i ciljeva. Adelina će sa vama razgovarati o vašoj medicinskoj istoriji, prehrani i životnom stilu kako bi razumjela vašu situaciju. Na kraju ćete dobiti personalizovani plan.",
+      "Početna konsultacija traje oko sat vremena i uključuje detaljnu procjenu vašeg zdravlja, navika i ciljeva. Adelina će sa vama razgovarati o vašoj medicinskoj historiji, ishrani i životnom stilu kako bi razumjela vašu situaciju. Na kraju ćete dobiti personalizovani plan.",
   },
   {
     id: 2,

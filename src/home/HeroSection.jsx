@@ -37,7 +37,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             >
               Dobrodošli u Centar za nutricionizam i dijetetiku Adelina
-              Tabaković. Pružamo individualizovanu, dugotrajnu podršku za vašu
+              Tabaković. Pružamo individualnu, dugotrajnu podršku za vašu
               zdravstvenu transformaciju kroz stručnost i naučne dokaze.
             </motion.p>
 
