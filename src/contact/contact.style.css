@@ -123,6 +123,27 @@
   color: var(--color-lime);
 }
 
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: hsl(78, 58%, 77%);
+  text-align: center;
+}
+
+.success-message h3 {
+  font-family: "Teachers";
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.success-message p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 /* ===================== */
 /* FAQ SECTION           */
 /* ===================== */
@@ -226,6 +247,10 @@
   .contact-section,
   .faq-section {
     padding: var(--section-padding-mobile);
+  }
+
+  .success-message h3 {
+    font-size: 25px;
   }
 }
 

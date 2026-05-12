@@ -30,18 +30,32 @@ const FooterLogo = ({ className }) => {
 };
 
 const HeroImage = ({ className }) => {
-  return <img src={heroImage} alt="hero image" className={className} />;
+  return (
+    <img
+      src={heroImage}
+      alt="Adelina Tabaković drži zelenu jabuku ispred logotipa Centra za nutricionizam i dijetetiku"
+      className={className}
+    />
+  );
 };
 
 const HeroMobileImage = ({ className }) => {
   return (
-    <img src={heroMobileImage} alt="hero mobile image" className={className} />
+    <img
+      src={heroMobileImage}
+      alt="Adelina Tabaković drži zelenu jabuku ispred logotipa Centra za nutricionizam i dijetetiku"
+      className={className}
+    />
   );
 };
 
 const AboutSectionImage = ({ className }) => {
   return (
-    <img src={aboutSectionImage} alt="image of Adelina" className={className} />
+    <img
+      src={aboutSectionImage}
+      alt="Adelina Tabaković sjedi u uredu centra za nutricionizam i dijetetiku."
+      className={className}
+    />
   );
 };
 
@@ -109,7 +123,7 @@ const CtaImg = ({ className }) => {
   return (
     <img
       src={ctaImg}
-      alt="slika Adeline i  drzi ciniju sa vocem"
+      alt="Adelina Tabaković stoji sa prekrštenim rukama ispred brendiranog pozadinskog vizuala sa logotipom jabuke."
       className={className}
     />
   );
@@ -119,7 +133,7 @@ const MissionImg = ({ className }) => {
   return (
     <img
       src={missionImg}
-      alt="photo of Adelina while working"
+      alt="Adelina Tabaković radi u uredu centra za nutricionizam i dijetetiku."
       className={className}
     />
   );
@@ -129,7 +143,7 @@ const FeaturesImg = ({ className }) => {
   return (
     <img
       src={featuresImg}
-      alt="photo of adelina while doing testing on patience"
+      alt="Adelina Tabaković tokom konsultacije sa klijentom."
       className={className}
     />
   );
@@ -152,7 +166,13 @@ const WaveLight = ({ className }) => {
 };
 
 const StoryImg = ({ className }) => {
-  return <img src={storyImg} alt="" className={className} />;
+  return (
+    <img
+      src={storyImg}
+      alt="Adelina Tabaković stoji ispred zida sa logotipom centra."
+      className={className}
+    />
+  );
 };
 
 export {
