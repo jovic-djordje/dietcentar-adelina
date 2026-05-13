@@ -29,8 +29,8 @@ const TimelineSection = () => {
     {
       id: 4,
       icon: <LuGlobe className="features-icon" />,
-      title: "Međunarodno iskustvo",
-      text: "Tokom studija imala sam priliku učestvovati u studentskom programu u Sjedinjenim Američkim Državama, gdje sam stekla vrijedna međunarodna iskustva, ostvarila prve saradnje i započela rad sa klijentima iz inostranstva.",
+      title: "Internacionalno iskustvo",
+      text: "Tokom studija imala sam priliku učestvovati u studentskom programu u Sjedinjenim Američkim Državama, gdje sam stekla vrijedna internacionalna iskustva, ostvarila prve saradnje i započela rad sa klijentima iz inostranstva.",
     },
   ];
 
