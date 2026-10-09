@@ -186,8 +186,9 @@ footer {
 }
 
 .footer-logo {
+  display: block;
   width: 65px;
-  height: 50px;
+  height: auto;
 }
 
 .footer-social-icon {

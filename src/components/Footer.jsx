@@ -16,45 +16,65 @@ const Footer = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Link to="#top" className="footer-nav-item-link">
+          <Link
+            to="#top"
+            className="footer-nav-item-link"
+            aria-label="Diet centar Adelina — vrh stranice"
+          >
             <FooterLogo className="footer-logo" />
           </Link>
 
-          <nav className="footer-nav">
+          <nav className="footer-nav" aria-label="Footer navigacija">
             <ul className="footer-nav-item-holder">
-              <Link to="/" className="footer-nav-item-link">
-                <li className="footer-nav-item">Početna</li>
-              </Link>
-              <Link to="/ocentru" className="footer-nav-item-link">
-                <li className="footer-nav-item">O centru</li>
-              </Link>
-              <Link to="/omeni" className="footer-nav-item-link">
-                <li className="footer-nav-item">O meni</li>
-              </Link>
-              <Link to="/usluge" className="footer-nav-item-link">
-                <li className="footer-nav-item">Usluge</li>
-              </Link>
-              <Link to="/kontakt" className="footer-nav-item-link">
-                <li className="footer-nav-item">Kontakt</li>
-              </Link>
+              <li className="footer-nav-item">
+                <Link to="/" className="footer-nav-item-link">
+                  Početna
+                </Link>
+              </li>
+
+              <li className="footer-nav-item">
+                <Link to="/ocentru" className="footer-nav-item-link">
+                  O centru
+                </Link>
+              </li>
+
+              <li className="footer-nav-item">
+                <Link to="/omeni" className="footer-nav-item-link">
+                  O meni
+                </Link>
+              </li>
+
+              <li className="footer-nav-item">
+                <Link to="/usluge" className="footer-nav-item-link">
+                  Usluge
+                </Link>
+              </li>
+
+              <li className="footer-nav-item">
+                <Link to="/kontakt" className="footer-nav-item-link">
+                  Kontakt
+                </Link>
+              </li>
             </ul>
           </nav>
 
           <div className="footer-socials-holder">
-            <Link
-              to="https://www.instagram.com/dietcentar/"
-              className="footer-icon-link"
-              target="_blank"
-            >
-              <FaInstagram className="footer-social-icon" />
-            </Link>
             <a
-              href="mailto:adelina.tabakovic25@gmail.com"
+              href="https://www.instagram.com/dietcentar/"
               className="footer-icon-link"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Posjetite Instagram profil Diet centra Adelina"
             >
-              <BiLogoGmail className="footer-social-icon" />
+              <FaInstagram className="footer-social-icon" aria-hidden="true" />
+            </a>
+
+            <a
+              href="mailto:adelina.tabakovic25@gmail.com"
+              className="footer-icon-link"
+              aria-label="Pošaljite email Diet centru Adelina"
+            >
+              <BiLogoGmail className="footer-social-icon" aria-hidden="true" />
             </a>
           </div>
         </motion.div>
@@ -70,7 +90,8 @@ const Footer = () => {
             © 2026 Centar za nutricionizam i dijetetiku Adelina Tabaković. Sva
             prava zadržana.
           </p>
-          <p className="prod">Design&Code by Adiho & Djordje</p>
+
+          <p className="prod">Design & Code by Adiho & Djordje</p>
         </motion.div>
       </div>
     </footer>
