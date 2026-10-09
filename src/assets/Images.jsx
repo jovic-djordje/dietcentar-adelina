@@ -1,8 +1,10 @@
 import logo from "./logo.webp";
 import logoLight from "./logo2 (1).webp";
 import footerLogo from "./logo2.webp";
-import heroImage from "./hero-img (2).webp";
-import heroMobileImage from "./mobile-hero (1).webp";
+{
+  /*import heroImage from "./hero-img (2).webp";
+import heroMobileImage from "./mobile-hero (1).webp";*/
+}
 import aboutSectionImage from "./about-sec-img.webp";
 import testimonialImgOne from "./testimonial-img.webp";
 import testimonialImgTwo from "./testimonial-img-two.webp";
@@ -32,11 +34,11 @@ const FooterLogo = ({ className }) => {
 const HeroImage = ({ className }) => {
   return (
     <img
-      src={heroImage}
+      src="/images/hero-desktop.webp"
       alt="Adelina Tabaković drži zelenu jabuku ispred logotipa Centra za nutricionizam i dijetetiku"
       className={className}
-      width={1365}
-      height={768}
+      width={1200}
+      height={800}
       fetchPriority="high"
       decoding="async"
     />
@@ -46,7 +48,7 @@ const HeroImage = ({ className }) => {
 const HeroMobileImage = ({ className }) => {
   return (
     <img
-      src={heroMobileImage}
+      src="/images/hero-mobile.webp"
       alt="Adelina Tabaković drži zelenu jabuku ispred logotipa Centra za nutricionizam i dijetetiku"
       className={className}
       width={704}
