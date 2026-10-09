@@ -51,6 +51,7 @@ const HeroMobileImage = ({ className }) => {
       className={className}
       width={704}
       height={1534}
+      fetchPriority="high"
       decoding="async"
     />
   );
