@@ -1,21 +1,21 @@
 import logo from "./logo.webp";
-import logoLight from "./logo2.png";
+import logoLight from "./logo2 (1).webp";
 import footerLogo from "./logo2.webp";
-import heroImage from "./hero-img.png";
-import heroMobileImage from "./mobile-hero.png";
-import aboutSectionImage from "./about-sec-img.jpeg";
-import testimonialImgOne from "./testimonial-img.png";
-import testimonialImgTwo from "./testimonial-img-two.png";
-import testimonialImgThree from "./testimonial-img-three.png";
-import testimonialImgFour from "./testimonial-img-four.png";
-import testimonialImgFive from "./testimonial-img-five.png";
-import testimonialImgSix from "./testimonial-img-six.png";
-import ctaImg from "./cta-img.png";
-import missionImg from "./mission-img.jpeg";
-import featuresImg from "./features-img.jpg";
+import heroImage from "./hero-img (2).webp";
+import heroMobileImage from "./mobile-hero (1).webp";
+import aboutSectionImage from "./about-sec-img.webp";
+import testimonialImgOne from "./testimonial-img.webp";
+import testimonialImgTwo from "./testimonial-img-two.webp";
+import testimonialImgThree from "./testimonial-img-three.webp";
+import testimonialImgFour from "./testimonial-img-four.webp";
+import testimonialImgFive from "./testimonial-img-five.webp";
+import testimonialImgSix from "./testimonial-img-six.webp";
+import ctaImg from "./cta-img.webp";
+import missionImg from "./mission-img.webp";
+import featuresImg from "./features-img.webp";
 import wave from "./wave-haikei.svg";
 import waveLight from "./wave-light.svg";
-import storyImg from "./story-section-img.jpg";
+import storyImg from "./story-section-img.webp";
 
 const Logo = ({ className }) => {
   return <img src={logo} alt="diet centar logo" className={className} />;
@@ -35,6 +35,10 @@ const HeroImage = ({ className }) => {
       src={heroImage}
       alt="Adelina Tabaković drži zelenu jabuku ispred logotipa Centra za nutricionizam i dijetetiku"
       className={className}
+      width={1365}
+      height={768}
+      fetchPriority="high"
+      decoding="async"
     />
   );
 };
@@ -45,6 +49,9 @@ const HeroMobileImage = ({ className }) => {
       src={heroMobileImage}
       alt="Adelina Tabaković drži zelenu jabuku ispred logotipa Centra za nutricionizam i dijetetiku"
       className={className}
+      width={704}
+      height={1534}
+      decoding="async"
     />
   );
 };
@@ -53,8 +60,12 @@ const AboutSectionImage = ({ className }) => {
   return (
     <img
       src={aboutSectionImage}
-      alt="Adelina Tabaković sjedi u uredu centra za nutricionizam i dijetetiku."
+      alt="Adelina Tabaković sjedi u uredu centra za nutricionizam i dijetetiku"
       className={className}
+      width={4000}
+      height={2667}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -63,8 +74,12 @@ const TestimonialImgOne = ({ className }) => {
   return (
     <img
       src={testimonialImgOne}
-      alt="testimonial image"
+      alt=""
       className={className}
+      width={45}
+      height={45}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -73,8 +88,12 @@ const TestimonialImgTwo = ({ className }) => {
   return (
     <img
       src={testimonialImgTwo}
-      alt="testimonial image"
+      alt=""
       className={className}
+      width={45}
+      height={45}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -83,8 +102,12 @@ const TestimonialImgThree = ({ className }) => {
   return (
     <img
       src={testimonialImgThree}
-      alt="testimonial image"
+      alt=""
       className={className}
+      width={45}
+      height={45}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -93,8 +116,12 @@ const TestimonialImgFour = ({ className }) => {
   return (
     <img
       src={testimonialImgFour}
-      alt="testimonial image"
+      alt=""
       className={className}
+      width={45}
+      height={45}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -103,8 +130,12 @@ const TestimonialImgFive = ({ className }) => {
   return (
     <img
       src={testimonialImgFive}
-      alt="testimonial image"
+      alt=""
       className={className}
+      width={45}
+      height={45}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -113,8 +144,12 @@ const TestimonialImgSix = ({ className }) => {
   return (
     <img
       src={testimonialImgSix}
-      alt="testimonial image"
+      alt=""
       className={className}
+      width={45}
+      height={45}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
@@ -123,21 +158,27 @@ const CtaImg = ({ className }) => {
   return (
     <img
       src={ctaImg}
-      alt="Adelina Tabaković stoji sa prekrštenim rukama ispred brendiranog pozadinskog vizuala sa logotipom jabuke."
+      alt="Adelina Tabaković stoji sa prekrštenim rukama ispred brendiranog pozadinskog vizuala sa logotipom jabuke"
       className={className}
+      width={1289}
+      height={1859}
+      loading="lazy"
+      decoding="async"
     />
   );
 };
 
-const MissionImg = ({ className }) => {
-  return (
-    <img
-      src={missionImg}
-      alt="Adelina Tabaković radi u uredu centra za nutricionizam i dijetetiku."
-      className={className}
-    />
-  );
-};
+const MissionImg = ({ className }) => (
+  <img
+    src={missionImg}
+    alt="Adelina Tabaković radi u uredu centra za nutricionizam i dijetetiku"
+    className={className}
+    width={1290}
+    height={709}
+    loading="lazy"
+    decoding="async"
+  />
+);
 
 const FeaturesImg = ({ className }) => {
   return (
@@ -150,18 +191,12 @@ const FeaturesImg = ({ className }) => {
 };
 
 const Wave = ({ className }) => {
-  return (
-    <img src={wave} alt="center hero section image" className={className} />
-  );
+  return <img src={wave} alt="" aria-hidden="true" className={className} />;
 };
 
 const WaveLight = ({ className }) => {
   return (
-    <img
-      src={waveLight}
-      alt="contact hero section image"
-      className={className}
-    />
+    <img src={waveLight} alt="" aria-hidden="true" className={className} />
   );
 };
 

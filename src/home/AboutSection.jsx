@@ -62,7 +62,7 @@ const AboutSection = () => {
           </motion.p>
 
           <motion.p className="about-section-text" variants={textItemVariants}>
-            Danas vodim vlastiti centar — stručna i dugoročna podrška kroz
+            Danas vodim vlastiti centar, stručna i dugoročna podrška kroz
             nutricionizam, uz potpunu brigu o zdravlju svakog klijenta.
           </motion.p>
 

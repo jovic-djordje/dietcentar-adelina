@@ -30,7 +30,7 @@ const OfferHero = () => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           >
             Svaka usluga je osmišljena kao samostalan korak ili dio dugoročnog
-            procesa — birajte ono što odgovara vašim potrebama.
+            procesa, birajte ono što odgovara vašim potrebama.
           </motion.p>
         </div>
       </div>
